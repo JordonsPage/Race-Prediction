@@ -21,7 +21,7 @@ This predictor takes your past 110m hurdle race times and forecasts your next pe
 
 ## Tech Stack
 
-- **Language:** Python 3.x
+- **Language:** Python 3.13
 - **Libraries:**
   - `numpy` — numerical operations
   - `scipy` — regression and curve fitting
