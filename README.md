@@ -19,11 +19,18 @@ This predictor takes your past 110m hurdle race times and forecasts your next pe
 
 ---
 
-## Tech Stack
+## Data
 
-- **Language:** Python 3.13
-- **Libraries:**
-  - `numpy` — numerical operations
-  - `scipy` — regression and curve fitting
-  - `pandas` — data handling
-  - `matplotlib` — performance trend visualization
+All training data is self-logged race results. CSV format expected — see `data/sample.csv` for the schema.
+
+---
+
+## What's next
+
+- Add meet-level features (altitude, surface type)
+- Experiment with gradient boosting
+- Build a simple CLI or web interface for input
+
+---
+
+*Built by [Jo](https://github.com/JordonsPage)*
