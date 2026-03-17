@@ -1,76 +1,29 @@
-# track-time-predictor
+# 🏃 110m Hurdle Race Time Predictor
 
-Predicts track & field finish times using personal race history and machine learning.
-
----
-
-## What it does
-
-Takes your past race data — event, conditions, and performance — and trains a regression model to predict future finish times. Built on `scikit-learn` using your own logged results as the training set.
+A machine learning-powered tool that predicts your next 110m hurdle race time based on your personal race history across high school (39") and college (42") competition.
 
 ---
 
-## Features used
+## Overview
 
-| Feature | Description |
-|---|---|
-| `event` | Race distance/type (100m, 400m, 1600m, etc.) |
-| `lane` | Lane assignment |
-| `wind_mps` | Wind speed in m/s |
-| `temp_c` | Temperature at race time |
-| `days_since_last_race` | Recovery gap |
-| `season` | Indoor / outdoor |
-| `finish_time_s` | **Target** — time in seconds |
+This predictor takes your past 110m hurdle race times and forecasts your next performance. It accounts for the hurdle height difference between high school (39") and college (42") and uses your historical progression trend to generate a predicted time.
 
 ---
 
-## Setup
+## Features
 
-```bash
-git clone https://github.com/JordonsPage/track-time-predictor
-cd track-time-predictor
-pip install -r requirements.txt
-```
-
-**Requirements:** Python 3.10+, scikit-learn, pandas, numpy
+- Input race history from **high school (39") and/or college (42")**
+- Normalizes times across hurdle heights for accurate comparison
+- Tracks your **performance trend** over time
+- Outputs a predicted time with a confidence range
 
 ---
 
-## Usage
+## Tech Stack
 
-Add your race history to `data/races.csv`, then:
-
-```bash
-python predict.py --event 1600 --wind -0.5 --temp 18 --days_rest 7
-```
-
-**Example output:**
-```
-Predicted finish time: 4:28.3
-```
-
----
-
-## Model
-
-Uses a `RandomForestRegressor` trained on personal race history. Evaluated with Mean Absolute Error (MAE) in seconds.
-
-Current MAE: *update after training*
-
----
-
-## Data
-
-All training data is self-logged race results. CSV format expected — see `data/sample.csv` for the schema.
-
----
-
-## What's next
-
-- Add meet-level features (altitude, surface type)
-- Experiment with gradient boosting
-- Build a simple CLI or web interface for input
-
----
-
-*Built by [Jo](https://github.com/JordonsPage)*
+- **Language:** Python 3.x
+- **Libraries:**
+  - `numpy` — numerical operations
+  - `scipy` — regression and curve fitting
+  - `pandas` — data handling
+  - `matplotlib` — performance trend visualization
