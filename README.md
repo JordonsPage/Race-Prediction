@@ -1,4 +1,4 @@
-# 🏃 110m Hurdle Race Time Predictor
+# 110m Hurdle Race Time Predictor
 
 A machine learning-powered tool that predicts your next 110m hurdle race time based on your personal race history across high school (39") and college (42") competition.
 
@@ -21,7 +21,7 @@ This predictor takes your past 110m hurdle race times and forecasts your next pe
 
 ## Data
 
-All training data is self-logged race results. CSV format expected — see `data/sample.csv` for the schema.
+All training data is self-logged race results. CSV format expected see `data/sample.csv` for the schema.
 
 ---
 
@@ -33,4 +33,4 @@ All training data is self-logged race results. CSV format expected — see `data
 
 ---
 
-*Built by [Jo](https://github.com/JordonsPage)*
+*Built by [Jordon](https://github.com/JordonsPage)*
